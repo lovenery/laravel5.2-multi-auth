@@ -18,3 +18,11 @@ Route::get('/', function () {
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
+
+//
+Route::get('admin/login', 'Admin\LgoinController@getLogin');
+Route::post('admin/login', 'Admin\LgoinController@postLogin');
+Route::get('admin/register', 'Admin\LgoinController@getRegister');
+Route::post('admin/register', 'Admin\LgoinController@postRegister');
+Route::post('admin/logout', 'Admin\LgoinController@logout');
+Route::get('admin', 'Admin\IndexController@index');
